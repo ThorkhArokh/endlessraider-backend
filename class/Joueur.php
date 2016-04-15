@@ -6,7 +6,7 @@
         // Nom du joueur
         var $nom;
 		// Droit du joueur
-		var $droit
+		var $droit;
 		
 		//Constructeur
 		function Joueur($idIn, $nomIn, $droitIn) {

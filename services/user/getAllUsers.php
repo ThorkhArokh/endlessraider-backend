@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER["DOCUMENT_ROOT"].'/endlessraider-backend/persistance/userDao.php');
+require_once($_SERVER["DOCUMENT_ROOT"].'/endlessraider-backend/persistance/joueurDao.php');
 
 session_start();
 
@@ -12,7 +12,7 @@ if(isset($_SESSION['userConnect'])) {
 	// Utilisateur doit être un administrateur pour effectuer cette action
 	if($user->role->code == ROLE_ADMIN) {
 		$resultat['success'] = true;
-		$resultat['listeUsers'] = getAllUsers();
+		$resultat['listeUsers'] = getAllJoueurs();
 	} else {
 		$resultat['success'] = false;
 		$resultat['message'] = "Vous n'avez pas les droits nécessaires pour effectuer cette action.";
